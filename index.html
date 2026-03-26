@@ -22,13 +22,9 @@
       --shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -168,10 +164,6 @@
       color: var(--muted);
     }
 
-    .demo {
-      font-size: 1.03rem;
-    }
-
     .highlight {
       background: var(--accent-soft);
       border: 1px solid var(--line);
@@ -194,35 +186,50 @@
       font-weight: 700;
     }
 
-    .visual-block {
-      display: grid;
-      gap: 14px;
-    }
-
     .visual-placeholder {
       background: #fcfbf8;
       border: 1px dashed #cfcabf;
       border-radius: 14px;
       padding: 24px;
-      overflow: auto;
+      margin-top: 14px;
     }
 
     .visual-caption {
       font-size: 0.95rem;
       color: var(--muted);
+      margin-top: 12px;
     }
 
-    .ascii-diagram {
-      margin: 0;
-      font-family: "Courier New", Courier, monospace;
-      font-size: 0.92rem;
-      line-height: 1.6;
-      white-space: pre;
-      color: #383832;
+    .diagram {
+      display: grid;
+      place-items: center;
+      gap: 18px;
+      text-align: center;
     }
 
-    .contact-box {
-      text-align: left;
+    .diagram-top,
+    .diagram-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .diagram-center {
+      padding: 18px 22px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #ffffff;
+      font-weight: 700;
+      min-width: 240px;
+    }
+
+    .diagram-node {
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #ffffff;
+      font-size: 0.95rem;
     }
 
     .contact-box a {
@@ -249,10 +256,6 @@
       .card {
         padding: 22px;
       }
-
-      .ascii-diagram {
-        font-size: 0.82rem;
-      }
     }
   </style>
 </head>
@@ -277,35 +280,41 @@
 
       <section class="card">
         <h2>A Quick Demonstration</h2>
-        <p class="demo">
-          If you arrived here by typing or clicking <strong>transcend.doctor</strong>,
-          you have already experienced how a <strong>.doctor</strong> domain works.
+        <p>
+          If you typed or clicked <strong>transcend.doctor</strong>, you were brought to
+          <strong>[your .com domain here]</strong>.
         </p>
         <p>
-          A short, direct domain can act as a clean entry point — leading visitors
-          to your existing website without requiring any change to your current setup.
+          This is a simple demonstration of how a concise <strong>.doctor</strong> domain
+          can direct visitors to an existing website.
         </p>
-        <div class="highlight">
-          <strong>Simple idea:</strong> someone types or clicks a concise
-          <strong>.doctor</strong> address, but lands on a different website destination.
-        </div>
+        <p>
+          A short, direct domain can act as a clean entry point, while the actual website
+          remains on a different existing domain. This allows a doctor to use a memorable
+          <strong>.doctor</strong> address without needing to rebuild or replace the current website.
+        </p>
       </section>
 
       <section class="card">
         <h2>Why Your Website Domain Matters</h2>
         <p>
           Your website domain is your <strong>only permanent, self-owned digital asset</strong>.
+        </p>
+        <p>
           Everything else in your digital presence operates on rented platforms.
         </p>
-        <p>A domain gives you:</p>
+        <p>Your website domain gives you:</p>
         <ul>
-          <li>full ownership</li>
-          <li>long-term continuity</li>
-          <li>independence from platform changes</li>
+          <li>ownership</li>
+          <li>continuity</li>
+          <li>portability</li>
+          <li>independence from third-party platforms</li>
           <li>direct access to your audience</li>
         </ul>
         <p>
           A short, profession-aligned domain also improves recall, clarity, and ease of access.
+        </p>
+        <p>
           The <strong>.doctor</strong> extension makes your profession immediately clear.
         </p>
       </section>
@@ -323,7 +332,7 @@
         </div>
 
         <div class="card">
-          <h2>Social Media & Platforms</h2>
+          <h2>Social Media and Platform Presence</h2>
           <ul>
             <li>controlled by third-party policies</li>
             <li>dependent on algorithms for visibility</li>
@@ -337,34 +346,42 @@
       <section class="card">
         <h2>Practical Takeaway</h2>
         <p>
-          Platforms can attract attention. A self-owned website domain provides
-          stability and continuity.
+          Platforms can attract attention. A self-owned website domain provides stability and continuity.
         </p>
       </section>
 
       <section class="card">
         <h2>A Better Digital Structure</h2>
         <p>
-          The most stable digital presence is structured with a
-          <strong>self-owned website at the center</strong>, supported by all other channels.
+          The most stable digital presence is built with a <strong>self-owned website at the center</strong>,
+          supported by all other channels.
+        </p>
+        <p>
+          <strong>Core idea:</strong> your website domain acts as the central access point,
+          while all other channels support it and direct people toward it.
         </p>
 
-        <div class="visual-block">
-          <div class="visual-placeholder">
-            <pre class="ascii-diagram">         Social Media     Ads     Listings
+        <div class="visual-placeholder">
+          <div class="diagram">
+            <div class="diagram-top">
+              <div class="diagram-node">Instagram</div>
+              <div class="diagram-node">Facebook</div>
+              <div class="diagram-node">Ads</div>
+              <div class="diagram-node">Listings</div>
+            </div>
 
-                \          |          /
-                 \         |         /
-                  \        |        /
-               Self-Owned Website Domain
-                    premiumname.doctor
-                  /        |        \
-                 /         |         \
-          Print Material  QR Codes  Referrals</pre>
+            <div class="diagram-center">Self-Owned Website Domain</div>
+
+            <div class="diagram-bottom">
+              <div class="diagram-node">Print Material</div>
+              <div class="diagram-node">QR Codes</div>
+              <div class="diagram-node">Referrals</div>
+            </div>
           </div>
+
           <p class="visual-caption">
-            Core idea: your website domain acts as the central access point, while
-            all other channels support and direct attention toward it.
+            A self-owned website domain acts as the permanent hub of digital presence,
+            while platform-based channels remain supporting layers.
           </p>
         </div>
       </section>
@@ -403,18 +420,29 @@
           <li>limited in flexibility</li>
         </ul>
         <p>
-          A concise keyword-based <strong>.doctor</strong> domain can offer
-          simpler recall, broader relevance, clearer communication, and easier reuse
-          across campaigns.
+          A concise keyword-based <strong>.doctor</strong> domain can offer:
         </p>
+        <ul>
+          <li>simpler recall</li>
+          <li>broader relevance</li>
+          <li>clearer communication</li>
+          <li>easier reuse across campaigns</li>
+        </ul>
       </section>
 
       <section class="card">
-        <h2>Practical Use</h2>
+        <h2>Why Our Domains</h2>
         <p>
-          A <strong>.doctor</strong> domain can be used as a front-facing layer while
-          your current website remains unchanged.
+          Our domains are selected for practical use, clarity, and recall.
         </p>
+        <p>They are generally:</p>
+        <ul>
+          <li>short and easy to remember</li>
+          <li>easy to speak, spell, type, and share</li>
+          <li>aligned with aesthetic and cosmetic practice themes</li>
+          <li>suitable for digital and offline usage</li>
+          <li>usable as a front-facing domain while your current website remains unchanged</li>
+        </ul>
         <p>Common uses include:</p>
         <ul>
           <li>redirecting to your existing website</li>
@@ -442,22 +470,11 @@
       <section id="how-it-works" class="card">
         <h2>How It Works</h2>
         <ul>
-          <li>domains are secured through a registrar</li>
-          <li>the domain is pointed to your existing website</li>
+          <li>domains are secured via GoDaddy</li>
+          <li>GoDaddy transfers domain ownership to you</li>
+          <li>your technical team points the domain to your existing website</li>
           <li>no redesign or migration is required</li>
-          <li>ownership can be transferred if needed</li>
           <li>usable across online and offline channels</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h2>How to Evaluate a Domain</h2>
-        <ul>
-          <li>is it short and easy to remember?</li>
-          <li>is it easy to speak and spell?</li>
-          <li>does it align with your practice?</li>
-          <li>would someone recall it after hearing it once?</li>
-          <li>does it work in both digital and offline contexts?</li>
         </ul>
       </section>
 
@@ -468,18 +485,19 @@
         </p>
         <p>
           Selected domains may later be listed publicly or on marketplace platforms.
+        </p>
+        <p>
           Currently, options are shared directly on request.
         </p>
       </section>
 
       <section class="card">
         <h2>Next Steps</h2>
-        <ol>
-          <li>consider whether a name-based or keyword-based domain suits your use</li>
-          <li>think about how you would use it: bio link, ads, print, or campaigns</li>
-          <li>contact us to request available options</li>
-          <li>review and decide whether to secure one or more domains</li>
-        </ol>
+        <ul>
+          <li>discuss with your tech team</li>
+          <li>buy from the list of domains available for sale below</li>
+          <li>or <a href="mailto:your@email.com">contact us</a> to request available options</li>
+        </ul>
       </section>
 
       <section id="contact" class="card contact-box">
