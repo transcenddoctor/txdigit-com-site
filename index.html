@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transcend Doctor</title>
+  <meta
+    name="description"
+    content="Concise .doctor website addresses that can support, simplify, and strengthen a doctor's digital presence."
+  />
+  <style>
+    :root {
+      --bg: #f7f7f5;
+      --surface: #ffffff;
+      --text: #1f1f1c;
+      --muted: #5f5f58;
+      --line: #e5e3dc;
+      --accent: #161616;
+      --accent-soft: #f1efe8;
+      --max: 980px;
+      --radius: 14px;
+      --shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+    }
+
+    .hero {
+      background: linear-gradient(to bottom, #ffffff, #f7f7f5);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-inner {
+      padding: 72px 0 48px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 12px;
+      background: var(--accent-soft);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4.2vw, 3.5rem);
+      line-height: 1.15;
+      margin: 0 0 16px;
+      max-width: 850px;
+    }
+
+    .hero-subtext {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 760px;
+      margin: 0 0 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 13px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+      border: 1px solid var(--accent);
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--accent);
+      border-color: var(--line);
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    main {
+      padding: 28px 0 72px;
+    }
+
+    section {
+      margin: 22px 0;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 26px;
+    }
+
+    h2 {
+      font-size: 1.55rem;
+      line-height: 1.25;
+      margin: 0 0 14px;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      margin: 0 0 10px;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    p:last-child,
+    ul:last-child,
+    ol:last-child {
+      margin-bottom: 0;
+    }
+
+    ul, ol {
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .demo {
+      font-size: 1.03rem;
+    }
+
+    .highlight {
+      background: var(--accent-soft);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+
+    .domain-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .chip {
+      padding: 10px 14px;
+      background: #faf9f6;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    .visual-block {
+      display: grid;
+      gap: 14px;
+    }
+
+    .visual-placeholder {
+      background: #fcfbf8;
+      border: 1px dashed #cfcabf;
+      border-radius: 14px;
+      padding: 24px;
+      overflow: auto;
+    }
+
+    .visual-caption {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .ascii-diagram {
+      margin: 0;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 0.92rem;
+      line-height: 1.6;
+      white-space: pre;
+      color: #383832;
+    }
+
+    .contact-box {
+      text-align: left;
+    }
+
+    .contact-box a {
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 28px 0 42px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 780px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-inner {
+        padding-top: 56px;
+      }
+
+      .card {
+        padding: 22px;
+      }
+
+      .ascii-diagram {
+        font-size: 0.82rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container hero-inner">
+      <div class="eyebrow">Transcend Doctor</div>
+      <h1>Because your website domain is the one digital asset you truly own</h1>
+      <p class="hero-subtext">
+        Concise <strong>.doctor</strong> website addresses that can support, simplify,
+        and strengthen your digital presence.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact">Contact Us</a>
+        <a class="btn btn-secondary" href="#how-it-works">How It Works</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <section class="card">
+        <h2>A Quick Demonstration</h2>
+        <p class="demo">
+          If you arrived here by typing or clicking <strong>transcend.doctor</strong>,
+          you have already experienced how a <strong>.doctor</strong> domain works.
+        </p>
+        <p>
+          A short, direct domain can act as a clean entry point — leading visitors
+          to your existing website without requiring any change to your current setup.
+        </p>
+        <div class="highlight">
+          <strong>Simple idea:</strong> someone types or clicks a concise
+          <strong>.doctor</strong> address, but lands on a different website destination.
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Why Your Website Domain Matters</h2>
+        <p>
+          Your website domain is your <strong>only permanent, self-owned digital asset</strong>.
+          Everything else in your digital presence operates on rented platforms.
+        </p>
+        <p>A domain gives you:</p>
+        <ul>
+          <li>full ownership</li>
+          <li>long-term continuity</li>
+          <li>independence from platform changes</li>
+          <li>direct access to your audience</li>
+        </ul>
+        <p>
+          A short, profession-aligned domain also improves recall, clarity, and ease of access.
+          The <strong>.doctor</strong> extension makes your profession immediately clear.
+        </p>
+      </section>
+
+      <section class="grid-2">
+        <div class="card">
+          <h2>Self-Owned Website Domain</h2>
+          <ul>
+            <li>fully under your control</li>
+            <li>portable across platforms and providers</li>
+            <li>stable over time</li>
+            <li>flexible in structure and usage</li>
+            <li>acts as a consistent point of access</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Social Media & Platforms</h2>
+          <ul>
+            <li>controlled by third-party policies</li>
+            <li>dependent on algorithms for visibility</li>
+            <li>restricted in format and structure</li>
+            <li>subject to change, limitation, or loss of reach</li>
+            <li>useful, but not self-owned</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Practical Takeaway</h2>
+        <p>
+          Platforms can attract attention. A self-owned website domain provides
+          stability and continuity.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>A Better Digital Structure</h2>
+        <p>
+          The most stable digital presence is structured with a
+          <strong>self-owned website at the center</strong>, supported by all other channels.
+        </p>
+
+        <div class="visual-block">
+          <div class="visual-placeholder">
+            <pre class="ascii-diagram">         Social Media     Ads     Listings
+
+                \          |          /
+                 \         |         /
+                  \        |        /
+               Self-Owned Website Domain
+                    premiumname.doctor
+                  /        |        \
+                 /         |         \
+          Print Material  QR Codes  Referrals</pre>
+          </div>
+          <p class="visual-caption">
+            Core idea: your website domain acts as the central access point, while
+            all other channels support and direct attention toward it.
+          </p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Examples of .doctor Domains</h2>
+        <div class="domain-list">
+          <span class="chip">charm.doctor</span>
+          <span class="chip">radiance.doctor</span>
+          <span class="chip">refine.doctor</span>
+          <span class="chip">sculpt.doctor</span>
+        </div>
+        <p class="muted" style="margin-top: 14px;">
+          Short, direct, and easy to recall.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Key Advantages of a .doctor Address</h2>
+        <ul>
+          <li>clearly communicates your profession</li>
+          <li>concise and memorable</li>
+          <li>easy to speak, type, and share</li>
+          <li>works with your existing website</li>
+          <li>no redesign or migration required</li>
+          <li>usable across digital and offline channels</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Beyond Name-Based Domains</h2>
+        <p>Name-based domains are common, but they can be:</p>
+        <ul>
+          <li>harder to recall</li>
+          <li>dependent on exact spelling</li>
+          <li>limited in flexibility</li>
+        </ul>
+        <p>
+          A concise keyword-based <strong>.doctor</strong> domain can offer
+          simpler recall, broader relevance, clearer communication, and easier reuse
+          across campaigns.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Practical Use</h2>
+        <p>
+          A <strong>.doctor</strong> domain can be used as a front-facing layer while
+          your current website remains unchanged.
+        </p>
+        <p>Common uses include:</p>
+        <ul>
+          <li>redirecting to your existing website</li>
+          <li>use in Instagram bio and social profiles</li>
+          <li>inclusion in advertisements and print</li>
+          <li>campaign-specific usage</li>
+          <li>simplifying spoken referrals</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Market Perspective</h2>
+        <p>
+          Premium, single-word domains are limited digital assets.
+        </p>
+        <p>
+          Once registered, they are no longer available.
+        </p>
+        <p>
+          Concise, relevant domains are especially valuable where recall, clarity,
+          and trust influence decision-making.
+        </p>
+      </section>
+
+      <section id="how-it-works" class="card">
+        <h2>How It Works</h2>
+        <ul>
+          <li>domains are secured through a registrar</li>
+          <li>the domain is pointed to your existing website</li>
+          <li>no redesign or migration is required</li>
+          <li>ownership can be transferred if needed</li>
+          <li>usable across online and offline channels</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>How to Evaluate a Domain</h2>
+        <ul>
+          <li>is it short and easy to remember?</li>
+          <li>is it easy to speak and spell?</li>
+          <li>does it align with your practice?</li>
+          <li>would someone recall it after hearing it once?</li>
+          <li>does it work in both digital and offline contexts?</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Availability</h2>
+        <p>
+          Premium domains are limited and allocated on a first-come basis.
+        </p>
+        <p>
+          Selected domains may later be listed publicly or on marketplace platforms.
+          Currently, options are shared directly on request.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Next Steps</h2>
+        <ol>
+          <li>consider whether a name-based or keyword-based domain suits your use</li>
+          <li>think about how you would use it: bio link, ads, print, or campaigns</li>
+          <li>contact us to request available options</li>
+          <li>review and decide whether to secure one or more domains</li>
+        </ol>
+      </section>
+
+      <section id="contact" class="card contact-box">
+        <h2>Contact</h2>
+        <p>
+          To request the current list of available domains or discuss options:
+        </p>
+        <p><strong>Email:</strong> <a href="mailto:your@email.com">your@email.com</a></p>
+        <p><strong>Instagram:</strong> <a href="https://instagram.com/yourinstagram" target="_blank" rel="noopener">@yourinstagram</a></p>
+        <p class="muted">
+          A public list of available domains will be published on this website at a later stage.
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Transcend Doctor. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
