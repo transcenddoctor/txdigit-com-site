@@ -270,9 +270,202 @@
 }
 	
 	
+	  <!--new diagram -->
 	
-	
-	
+	<style>
+  /* your existing CSS above */
+
+  /* ===== Digital Presence Diagram ===== */
+  .digital-presence-diagram {
+    background: linear-gradient(to bottom, #fcfbf8, #f7f7f5);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 28px 22px 20px;
+    margin-top: 14px;
+  }
+
+  .dp-top-label {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 14px;
+  }
+
+  .dp-top-label span {
+    font-weight: 400;
+    color: var(--muted);
+  }
+
+  .dp-sources {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .dp-chip {
+    padding: 10px 14px;
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+  }
+
+  .dp-arrow {
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 1;
+    margin: 12px 0;
+    color: #8b877d;
+  }
+
+  .dp-domain-box {
+    background: #ffffff;
+    border: 1px solid #d9d3c5;
+    border-radius: 18px;
+    padding: 22px 18px;
+    text-align: center;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.05);
+  }
+
+  .dp-domain-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .dp-domain-example {
+    margin-top: 6px;
+    font-size: 1.15rem;
+    color: #5d7280;
+    font-weight: 700;
+  }
+
+  .dp-domain-subtext {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+  }
+
+  .dp-website-box {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    padding: 22px 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  }
+
+  .dp-website-title {
+    text-align: center;
+    font-size: 1.45rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .dp-website-title span {
+    font-weight: 400;
+    color: var(--muted);
+  }
+
+  .dp-website-subtitle {
+    text-align: center;
+    color: var(--muted);
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+
+  .dp-website-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .dp-website-grid div {
+    background: #faf9f6;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 10px 12px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+
+  .dp-caption {
+    margin-top: 16px;
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 14px 16px;
+    text-align: center;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  @media (max-width: 780px) {
+    .digital-presence-diagram {
+      padding: 20px 14px 16px;
+    }
+
+    .dp-top-label {
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+
+    .dp-sources {
+      gap: 8px;
+    }
+
+    .dp-chip {
+      font-size: 0.88rem;
+      padding: 8px 12px;
+    }
+
+    .dp-domain-box {
+      padding: 18px 14px;
+    }
+
+    .dp-domain-title {
+      font-size: 1.25rem;
+    }
+
+    .dp-domain-example {
+      font-size: 1rem;
+    }
+
+    .dp-website-box {
+      padding: 18px 14px;
+      border-radius: 18px;
+    }
+
+    .dp-website-title {
+      font-size: 1.2rem;
+    }
+
+    .dp-website-grid {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    .dp-website-grid div {
+      font-size: 0.9rem;
+      padding: 9px 10px;
+    }
+
+    .dp-caption {
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+  }
+  
+  <!--new diagram -->
+  
+  
+</style>
 	
 	
   </style>
@@ -317,7 +510,7 @@
     </section>
 
     <div class="hero-actions">
-	    <a class="btn btn-primary" href="mailto:info@transcend.doctor">Mail</a>
+		<a class="btn btn-primary" href="mailto:info@transcend.doctor">Mail</a>
 		<a class="btn btn-primary" href="#SEC-Inquire">Inquiry</a>
 		<a class="btn btn-secondary" href="#SEC-Current-Availability">Current Availability</a>	
 		<a class="btn btn-secondary" href="#SEC-live">Live example</a>
@@ -390,7 +583,69 @@
 
 	
   </p>
+  
+  
+  
+  
+  <section class="card">
+  <h3>How Patients Reach You</h3><br>
+  
 
+  <div class="digital-presence-diagram">
+
+    <div class="dp-top-label">
+      Social Media & Channels <span><B>(continuously evolving)</B></span>
+    </div>
+
+    <div class="dp-sources">
+      <div class="dp-chip">Instagram</div>
+      <div class="dp-chip">Ads</div>
+      <div class="dp-chip">Referrals</div>
+      <div class="dp-chip">QR</div>
+      <div class="dp-chip">Listings</div>
+    </div>
+
+    <div class="dp-arrow">↓</div>
+
+    <div class="dp-domain-box">
+      <div class="dp-domain-title">Your .doctor Domain</div>
+      <div class="dp-domain-example">e.g. transform.doctor</div>
+      <div class="dp-domain-subtext">Your primary public-facing address</div>
+    </div>
+
+    <div class="dp-arrow">↓</div>
+
+    <div class="dp-website-box">
+      <div class="dp-website-title">Your Website <span>(.com / existing)</span></div>
+      <div class="dp-website-subtitle">Your complete professional presence</div>
+
+      <div class="dp-website-grid">
+        <div>Credentials</div>
+        <div>Appointments & Forms</div>
+        <div>Achievements & Awards</div>
+        <div>Information</div>
+        <div>Testimonials</div>
+        <div>Contact & Enquiries</div>
+        <div>Publications</div>
+        <div>Schedule</div>
+      </div>
+    </div>
+
+    <div class="dp-caption">
+      Your domain acts as the <b>central permanent</b> hub, while all channels direct patients toward it.
+    </div>
+
+  </div>
+</section>
+  
+  
+  
+  
+  
+  
+  
+  
+<!-- Old diagram
   <div class="visual-placeholder">
     <div class="diagram">
 
@@ -420,7 +675,7 @@
   </div>
 </section>
 
-
+-->
 
 
 <section class="card">
